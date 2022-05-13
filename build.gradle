@@ -13,10 +13,11 @@ jar {
     manifest {
         attributes['Main-Class'] = application.mainClass
     }
+    archiveClassifier = 'regular'
 }
 
 shadowJar {
-    archiveFileName = jar.archiveFileName
+    archiveClassifier = null
 }
 
 repositories {
