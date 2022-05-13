@@ -1,5 +1,12 @@
+# IntelliJ related
 /.idea/
 *.iml
 
+# Gradle related
+.gradle/
+build/
+!**/src/**/build/
+
+# Maven related
 target/
 !**/src/**/target/
