@@ -13,11 +13,15 @@ jar {
     manifest {
         attributes['Main-Class'] = application.mainClass
     }
-    archiveClassifier = 'regular'
+    archiveClassifier.set('regular')
 }
 
 shadowJar {
-    archiveClassifier = null
+    archiveClassifier.set(null)
+    exclude 'META-INF/maven/'
+    exclude 'META-INF/versions/'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/NOTICE'
 }
 
 repositories {
